@@ -21,7 +21,7 @@ const HeroSection = () => {
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
             I specialize in transforming designs into functional,
-            high-performing web applications. Let's discuss your next project.
+            high-performing web applications. Lets discuss your next project.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
@@ -31,7 +31,7 @@ const HeroSection = () => {
           </button>
           <button className="inline-flex gap-2 items-center px-6 h-12 rounded-xl border border-white bg-white text-gray-900">
             <span>😊</span>
-            <span className="font-semibold">Let's Connect</span>
+            <span className="font-semibold">Lets Connect</span>
           </button>
         </div>
       </div>
