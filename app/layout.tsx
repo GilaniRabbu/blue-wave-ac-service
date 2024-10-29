@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Rubik_Wet_Paint } from "next/font/google";
+import Header from "@/components/Header/Header";
 import FooterSection from "@/components/Footer/Footer";
 import "./globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${rubik.variable} antialiased font-serif bg-gray-900 text-white`}
       >
+        <Header />
         {children}
         <FooterSection />
       </body>
