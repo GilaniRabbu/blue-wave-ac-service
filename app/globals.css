@@ -7,3 +7,39 @@
     @apply px-2 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-white/70 text-xs sm:text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dot-pattern {
+  --dot-bg: #334155;
+  --dot-color: white;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+.box-pattern {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(#444cf7 1px, transparent 1px),
+    linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
+  background-size: 20px 20px;
+}
