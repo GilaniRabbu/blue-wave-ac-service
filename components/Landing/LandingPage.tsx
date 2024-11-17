@@ -1,15 +1,13 @@
 import React from "react";
 import HeroSection from "@/components/Hero/Hero";
 import TapeSection from "@/components/Tape/Tape";
-// import Header from "@/components/Header/Header";
-// import FooterSection from "./../Footer/Footer";
+import AboutSection from "@/components/About/About";
 
 const LandingPage = () => {
   return (
     <div className="relative">
-      {/*<Header />*/}
-      {/*<FooterSection />*/}
       <HeroSection />
+      <AboutSection />
       <TapeSection />
     </div>
   );
