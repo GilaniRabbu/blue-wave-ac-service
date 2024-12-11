@@ -1,3 +1,6 @@
+@import url("https://api.fontshare.com/v2/css?f[]=bonny@100,300,400,500,700&f[]=pilcrow-rounded@400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +9,82 @@
   .nav-item {
     @apply px-2 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-white/70 text-xs sm:text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
   }
+}
+
+/* Define font weight utility classes */
+.inter-100 {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+.inter-200 {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+}
+
+.inter-300 {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.inter-600 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.inter-700 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.inter-800 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+}
+
+.inter-900 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.font-pilcrow-regular {
+  font-family: "Pilcrow Rounded", sans-serif;
+  font-weight: 400;
+}
+
+.font-bonny-thin {
+  font-family: "Bonny", serif;
+  font-weight: 100;
+}
+
+.font-bonny-light {
+  font-family: "Bonny", serif;
+  font-weight: 300;
+}
+
+.font-bonny-regular {
+  font-family: "Bonny", serif;
+  font-weight: 400;
+}
+
+.font-bonny-medium {
+  font-family: "Bonny", serif;
+  font-weight: 500;
+}
+
+.font-bonny-bold {
+  font-family: "Bonny", serif;
+  font-weight: 700;
 }
 
 * {

@@ -9,10 +9,6 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
-      fontFamily: {
-        sans: "var(--font-sans)",
-        serif: "var(--font-serif)",
-      },
       animation: {
         "move-left": "move-left 1s linear infinite",
       },

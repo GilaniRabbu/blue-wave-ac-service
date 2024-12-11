@@ -16,7 +16,7 @@ const AnimatedWord: React.FC<AnimatedWordProps> = ({ text, className }) => {
           key={index}
           whileHover={{ scaleY: 1.5 }} // Scale up vertically on hover
           transition={{ duration: 0.2 }}
-          className="inline-block origin-bottom cursor-pointer" // Set the origin to the bottom
+          className="inline-block origin-bottom cursor-pointer font-bonny-regular" // Set the origin to the bottom
         >
           {letter}
         </motion.span>
