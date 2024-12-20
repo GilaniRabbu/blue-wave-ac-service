@@ -43,7 +43,6 @@ export function IconCloud({
   canvasWidth = 1600,
   iconSize = 88,
   freezeActive = false,
-  animationDuration = 500,
   clickToFront = true,
   tooltipDelay = 0,
 }: Omit<IconCloudProps, "canvasHeight">) {
@@ -51,12 +50,11 @@ export function IconCloud({
   const cloudRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!cloudRef.current) return;
+    if (!cloudRef.current || !window.TagCanvas) return;
 
     let mouseX = 0;
     let mouseY = 0;
     let isMouseInside = false;
-    let animationFrameId: number;
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!cloudRef.current || !isMouseInside) return;
@@ -64,28 +62,13 @@ export function IconCloud({
       const rect = cloudRef.current.getBoundingClientRect();
       mouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       mouseY = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+      window.TagCanvas?.SetSpeed("myCanvas", [mouseX * 0.8, mouseY * 0.8]);
     };
 
-    const handleMouseEnter = () => {
-      isMouseInside = true;
-    };
-
+    const handleMouseEnter = () => (isMouseInside = true);
     const handleMouseLeave = () => {
       isMouseInside = false;
-      mouseX = 0;
-      mouseY = 0;
-    };
-
-    const updateIconPositions = () => {
-      if (window.TagCanvas && isMouseInside) {
-        try {
-          window.TagCanvas?.Update("myCanvas");
-          window.TagCanvas?.SetSpeed("myCanvas", [mouseX * 2, mouseY * 2]);
-        } catch (e) {
-          console.error(e);
-        }
-      }
-      animationFrameId = requestAnimationFrame(updateIconPositions);
+      window.TagCanvas?.SetSpeed("myCanvas", [0, 0]);
     };
 
     const container = cloudRef.current;
@@ -93,29 +76,11 @@ export function IconCloud({
     container.addEventListener("mouseenter", handleMouseEnter);
     container.addEventListener("mouseleave", handleMouseLeave);
 
-    updateIconPositions();
-
     return () => {
       container.removeEventListener("mousemove", handleMouseMove);
       container.removeEventListener("mouseenter", handleMouseEnter);
       container.removeEventListener("mouseleave", handleMouseLeave);
-      cancelAnimationFrame(animationFrameId);
     };
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.TagCanvas) {
-        try {
-          window.TagCanvas?.Reload("myCanvas");
-        } catch (e) {
-          console.error(e);
-        }
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (error) {
@@ -152,7 +117,6 @@ export function IconCloud({
         }}
         options={{
           freezeActive,
-          // animationDuration,
           clickToFront,
           tooltipDelay,
           initial: [0.1, -0.1],
@@ -160,7 +124,6 @@ export function IconCloud({
           fadeIn: 1000,
           shape: "sphere",
           noSelect: true,
-          lock: null,
           shuffleTags: true,
           reverse: true,
           depth: 1,
@@ -173,11 +136,6 @@ export function IconCloud({
           radiusZ: 0.8,
           stretchX: 1.2,
           stretchY: 1.2,
-          dragControl: true,
-          dragThreshold: 1,
-          centreFunc: (dimensions: number[]) => {
-            return [dimensions[0] / 2, dimensions[1] / 2];
-          },
         }}
       >
         {icons}
