@@ -20,6 +20,7 @@ const FooterSection = () => {
             href={"https://www.linkedin.com/in/toufiq-gilani-rabbu/"}
             target="_blank"
             className="p-2 rounded-full border transition-all hover:scale-95"
+            aria-label="Visit Toufiq Gilani Rabbu's LinkedIn profile"
           >
             <FaLinkedin className="text-2xl" />
           </Link>
@@ -27,6 +28,7 @@ const FooterSection = () => {
             href={"https://www.facebook.com/GilaniRabbu"}
             target="_blank"
             className="p-2 rounded-full border transition-all hover:scale-95"
+            aria-label="Visit Toufiq Gilani Rabbu's Facebook profile"
           >
             <FaFacebookSquare className="text-2xl" />
           </Link>
@@ -34,6 +36,7 @@ const FooterSection = () => {
             href={"https://x.com/GilaniRabbu"}
             target="_blank"
             className="p-2 rounded-full border transition-all hover:scale-95"
+            aria-label="Visit Toufiq Gilani Rabbu's X profile"
           >
             <FaSquareXTwitter className="text-2xl" />
           </Link>
@@ -41,6 +44,7 @@ const FooterSection = () => {
             href={"https://github.com/GilaniRabbu"}
             target="_blank"
             className="p-2 rounded-full border transition-all hover:scale-95"
+            aria-label="Visit Toufiq Gilani Rabbu's Github profile"
           >
             <FaSquareGithub className="text-2xl" />
           </Link>
@@ -57,7 +61,7 @@ const FooterSection = () => {
             </Link>
           ))}
         </div>
-        <p className="text-center text-sm inter-400 text-white/40">
+        <p className="text-center text-sm inter-400 text-white">
           © 2024 Gilani Rabbu. All rights reserved.
         </p>
       </div>
