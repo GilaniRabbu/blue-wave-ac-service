@@ -9,10 +9,10 @@ const LandingPage = () => {
   return (
     <div className="relative">
       <HeroSection />
+      <TapeSection />
       <AboutSection />
       <Portfolio />
       <Skills />
-      <TapeSection />
     </div>
   );
 };

@@ -40,7 +40,7 @@ const defaultSlugs = [
 
 export function IconCloud({
   containerProps,
-  canvasWidth = 1600,
+  canvasWidth = 560,
   iconSize = 88,
   freezeActive = false,
   clickToFront = true,
@@ -128,7 +128,7 @@ export function IconCloud({
           reverse: true,
           depth: 1,
           maxSpeed: 0.05,
-          minSpeed: 0.005,
+          minSpeed: 0.02,
           decel: 0.95,
           interval: 20,
           radiusX: 0.8,
