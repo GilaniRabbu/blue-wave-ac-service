@@ -4,12 +4,14 @@ import TapeSection from "@/components/Tape/Tape";
 import AboutSection from "@/components/About/About";
 import Skills from "@/components/Skills/Skills";
 import Portfolio from "@/components/Portfolio/Portfolio";
+import ThemeMode from "@/components/Theme/ThemeMode";
 
 const LandingPage = () => {
   return (
-    <div className="relative">
+    <div className="">
       <HeroSection />
       <TapeSection />
+      <ThemeMode />
       <AboutSection />
       <Portfolio />
       <Skills />
