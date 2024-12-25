@@ -105,7 +105,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-center text-white text-2xl font-medium"
+                className="text-center text-2xl font-medium text-black dark:text-white hover:text-blue-300 dark:hover:text-teal-300 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
