@@ -1,5 +1,5 @@
 @import url("https://api.fontshare.com/v2/css?f[]=bonny@100,300,400,500,700&f[]=pilcrow-rounded@400,500,600,700,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,49 +12,44 @@
 }
 
 /* Define font weight utility classes */
-.inter-100 {
-  font-family: "Inter", sans-serif;
+.sora-100 {
+  font-family: "Sora", serif;
   font-weight: 100;
 }
 
-.inter-200 {
-  font-family: "Inter", sans-serif;
+.sora-200 {
+  font-family: "Sora", serif;
   font-weight: 200;
 }
 
-.inter-300 {
-  font-family: "Inter", sans-serif;
+.sora-300 {
+  font-family: "Sora", serif;
   font-weight: 300;
 }
 
-.inter-400 {
-  font-family: "Inter", sans-serif;
+.sora-400 {
+  font-family: "Sora", serif;
   font-weight: 400;
 }
 
-.inter-500 {
-  font-family: "Inter", sans-serif;
+.sora-500 {
+  font-family: "Sora", serif;
   font-weight: 500;
 }
 
-.inter-600 {
-  font-family: "Inter", sans-serif;
+.sora-600 {
+  font-family: "Sora", serif;
   font-weight: 600;
 }
 
-.inter-700 {
-  font-family: "Inter", sans-serif;
+.sora-700 {
+  font-family: "Sora", serif;
   font-weight: 700;
 }
 
-.inter-800 {
-  font-family: "Inter", sans-serif;
+.sora-800 {
+  font-family: "Sora", serif;
   font-weight: 800;
-}
-
-.inter-900 {
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
 }
 
 .font-pilcrow-regular {
@@ -95,6 +90,15 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+img,
+svg {
+  vertical-align: middle;
 }
 
 .dot-pattern {

@@ -1,41 +1,70 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { FaArrowDown } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60">
+    <section className="sora-300 relative overflow-hidden pt-[160px] pb-[80px] text-white bg-[#0F0715] dark:text-[#0F0715] dark:bg-white">
       <div className="container">
-        <div className="flex flex-col items-center">
-          <Image src="/hero-img-1.png" alt="Profile" width={100} height={100} />
-          <div className="px-4 py-1.5 inline-flex items-center gap-4 rounded-lg border border-gray-800 bg-gray-950">
-            <div className="bg-green-500 size-2.5 rounded-full"></div>
-            <div className="text-sm font-medium">
-              Available for new projects
+        <div className="flex items-center gap-14">
+          <div className="md:w-2/5 hidden md:block">
+            <div className="relative">
+              <Image
+                src="/profile.png"
+                alt="Tayler's Portrait"
+                width={440}
+                height={440}
+                className="object-cover w-[440px] h-[440px] block rounded-full border-2 border-[#2a1454]"
+              />
+            </div>
+          </div>
+          <div className="md:w-3/5">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl mb-4 font-bold">
+              Md Toufiq Gilani Rabbu.
+            </h1>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#8750f7] to-white">
+              <TypeAnimation
+                sequence={[
+                  "Mern Developer",
+                  2000,
+                  "Web Developer",
+                  2000,
+                  "Web Enthusiast",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ display: "inline-block" }}
+                repeat={Infinity}
+              />
+            </h2>
+            <div className="relative md:hidden mb-4">
+              <Image
+                src="/profile.png"
+                alt="Tayler's Portrait"
+                width={256}
+                height={256}
+                className="object-cover mx-auto w-[256px] h-[256px] block rounded-full border-2 border-[#2a1454]"
+              />
+            </div>
+            <p className="text-base md:text-lg lg:text-xl text-white w-full max-w-[550px]">
+              Explored the principles of typeface design and its impact on
+              visual communication.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <button className="px-8 py-4 border border-white rounded-full tracking-wider text-sm md:text-base font-medium">
+                Download CV
+              </button>
+              <button className="px-8 py-4 bg-gradient-to-r from-[#8750f7] to-[#2a1454] rounded-full tracking-wider text-sm md:text-base font-medium">
+                Let&apos;s Talk!
+              </button>
             </div>
           </div>
         </div>
-        <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
-          </h1>
-          <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming designs into functional,
-            high-performing web applications. Lets discuss your next project.
-          </p>
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex gap-2 items-center px-6 h-12 rounded-xl border border-white/15">
-            <span className="font-semibold">Explore My Work</span>
-            <FaArrowDown className="text-base" />
-          </button>
-          <button className="inline-flex gap-2 items-center px-6 h-12 rounded-xl border border-white bg-white text-gray-900">
-            <span>😊</span>
-            <span className="font-semibold">Lets Connect</span>
-          </button>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
