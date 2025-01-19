@@ -16,18 +16,18 @@ const TapeSection = () => {
   ];
 
   return (
-    <div className="py-16 lg:py-24 overflow-x-clip">
-      <div className="bg-gradient-to-r from bg-emerald-300 to-sky-400 -rotate-3 -mx-1">
+    <div className="py-20 overflow-x-clip">
+      <div className="-rotate-3 -mx-1 bg-indigo-200 dark:bg-indigo-900">
         <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="flex flex-none gap-4 pr-4 py-3 animate-move-left [animation-duration:30s]">
+          <div className="flex flex-none gap-4 pr-4 py-4 animate-move-left [animation-duration:30s]">
             {[...new Array(2)].fill(0).map((_, idx) => (
               <Fragment key={idx}>
                 {words.map((word) => (
                   <div key={word} className="inline-flex gap-4 items-center">
-                    <span className="text-gray-900 uppercase font-extrabold text-sm">
+                    <span className="uppercase font-extrabold text-xl">
                       {word}
                     </span>
-                    <IoIosStar className="text-2xl text-gray-900 -rotate-12" />
+                    <IoIosStar className="text-2xl -rotate-12" />
                   </div>
                 ))}
               </Fragment>
